@@ -18,7 +18,6 @@ __status__ = "Production"
 import numpy as np
 import Image
 #from __future__ import division
-image = np.ones((128,128))
 
 def box_counter (image, box_size):
     
@@ -52,7 +51,7 @@ def box_counter (image, box_size):
     #print reduced_box_number
     return reduced_box_number
 
-def fractal_dimention (image):
+def fractal_dimension (image):
     #print(image)    
     list_box_size=[4, 8, 16, 32]
     list_box_number = np.zeros(len(list_box_size))
@@ -60,7 +59,7 @@ def fractal_dimention (image):
         #print box_size
         #print box_size_ctr
         list_box_number  = box_counter(image, box_size)
-    return list_box_number(list_box_size), list_box_size
+    return list_box_number, list_box_size
     
         
         
