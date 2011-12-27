@@ -6,19 +6,15 @@ __license__ = ""
 __version__ = "0.0.2"
 __maintainer__ = "Kivanc Esat"
 __email__ = "esat [at] itu.edu.tr"
-__status__ = "Production"
+__status__ = "Production, only works with fracdim.0.1.5"
 
 import numpy as np
 import fracdim as fr
 import Image
 
-#image = np.ones((512,512))
-#image =  pl.Image.open('/home/busker/Documents/Fractal-Dimention/Test_images/Norway_municipalities_fdim-1.52__treshold_512-512.png')
-
-
-#fr.slope_finder(image)
-
 def image_converter (image_pattern):
+    '''
+    '''
     image = Image.open(image_pattern)
     image_binary = image.convert('1')
     image_binary_list= list(image_binary.getdata())
