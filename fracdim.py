@@ -3,7 +3,7 @@ __author__ = "Kivanc Esat"
 __copyright__ = ""
 __credits__ = ["Kivanc Esat, Mehmet Ali Anil"]
 __license__ = ""
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 __maintainer__ = "Kivanc Esat"
 __email__ = "esat [at] itu.edu.tr"
 __status__ = "Production"
@@ -18,7 +18,6 @@ def box_counter (image, box_size):
     """
     """
     image_size = len(image)   # ONLY WORKS WITH SQUARE IMAGE
-    print image_size    
     total_box_number = (image_size / box_size) # ONLY WORKS WITH SQUARE IMAGE
     reduced = np.zeros((total_box_number, total_box_number)) # ONLY WORKS WITH SQUARE IMAGE
     
@@ -31,16 +30,13 @@ def box_counter (image, box_size):
                 for box_col in range(col,(box_size+col)):  
 
                     sum_m = sum_m + image[box_row, box_col]
-            print sum_m
-            print row,col
-            print box_row, box_col
+            
             if sum_m >= (box_size**2) / 2:
                 reduced_row = row/box_size
                 reduced_col = col/box_size
                 reduced[reduced_row, reduced_col] = 1
-    print reduced
-    reduced_box_number = np.sum(reduced)
-    print reduced_box_number    
+    
+    reduced_box_number = np.sum(reduced)  
     return reduced_box_number
 
 def box_size_iterator (image):
@@ -63,12 +59,10 @@ def slope_finder (image):
     list_of_all = box_size_iterator(image)
     list_box_number = list_of_all[0]
     list_box_size = list_of_all[1]
-    print list_box_size, list_box_number
-    slope = np.polyfit(np.log(list_box_size),np.log(list_box_number),1)
-    print slope
-    plt.loglog(list_box_size,list_box_number, 'r')
-    plt.xlabel('Box size'); plt.ylabel('Box number')
-    plt.yscale('log'); plt.xscale('log')
-    plt.show()
-        
+    slope = np.polyfit(np.log(list_box_size),np.log(list_box_number),1) 
+    #plt.loglog(list_box_size,list_box_number, 'r')
+    #plt.xlabel('Box size'); plt.ylabel('Box number')
+    #plt.yscale('log'); plt.xscale('log')
+    #plt.show()
+    return slope        
     
