@@ -30,4 +30,5 @@ image = image_converter ('Test_images/Sierpinski_gasket.png')
 slope =  fr.slope_finder(image)
 
 print slope
+
     
