@@ -1,9 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 24 22:11:44 2011
-44
-@author: busker
-"""
+# Runner for fracdim module
+__author__ = "Kivanc Esat"
+__copyright__ = ""
+__credits__ = ["Kivanc Esat, Mehmet Ali Anil"]
+__license__ = ""
+__version__ = "0.0.2"
+__maintainer__ = "Kivanc Esat"
+__email__ = "esat [at] itu.edu.tr"
+__status__ = "Production"
 
 import numpy as np
 import fracdim as fr
