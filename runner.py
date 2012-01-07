@@ -16,7 +16,7 @@ def image_converter (image_pattern):
     return image_binary_matrix
     
 #image = image_converter ('Test_images/Sierpinski_gasket.gif')
-image = image_converter ('Test_images/2010-05-01_ORNEK-77_013.jpg')
+#image = image_converter ('Test_images/2010-05-01_ORNEK-77_013.jpg')
 #image = np.ones((1500,1500))
 slope =  fr.slope_finder(image)
 
