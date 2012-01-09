@@ -61,14 +61,6 @@ def slope_finder (image):
     list_box_size =list_of_all[1]
     list_box_size_inv = np.divide(1.0, list_of_all[1])
     list_box_area = np.multiply(list_box_number, np.multiply(list_box_size,list_box_size))
-    print 'box number'
-    print list_box_number    
-    print 'box size'
-    print list_box_size
-    print 'box size^2'
-    print np.multiply(list_box_size,list_box_size)
-    print 'box area= box number*boxsize^2'
-    print list_box_area
        
     # Hausdorff dimension
     slope_haus = np.polyfit(np.log10(list_box_size_inv), np.log10(list_box_number),1) 
