@@ -1,6 +1,6 @@
 Fracdim
 
-Fracdim is a module to find fractal dimension of a given growth image that is written in python.
+Fracdim is a module in python to find fractal dimension of a given growth image.
 
 Module is still under development. 
 
