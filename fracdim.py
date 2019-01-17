@@ -6,7 +6,7 @@ __credits__ = ["Kivanc Esat, Mehmet Ali Anil"]
 __license__ = ""
 __version__ = "0.2.5"
 __maintainer__ = "Kivanc Esat"
-__email__ = "esat [at] itu.edu.tr"
+__email__ = "kivancesat [at] gmail.com"
 __status__ = "Production"
 
 
